@@ -69,8 +69,8 @@ stages:
     - task: AzureResourceManagerTemplateDeployment@3
       inputs:
         deploymentScope: 'Resource Group'
-        azureResourceManagerConnection: 'FY20-ImaDemo (b8c7d821-4fbb-4089-8978-b966512a6a45)'
-        subscriptionId: 'b8c7d821-4fbb-4089-8978-b966512a6a45'
+        azureResourceManagerConnection: 'myYAML (c151972c-842e-4a49-b955-482b6cb92a1c)'
+        subscriptionId: 'c151972c-842e-4a49-b955-482b6cb92a1c'
         action: 'Create Or Update Resource Group'
         resourceGroupName: 'lz-yaml'
         location: 'Central US'
@@ -83,7 +83,7 @@ stages:
     - task: AzureRmWebAppDeployment@4
       inputs:
         ConnectionType: 'AzureRM'
-        azureSubscription: 'FY20-ImaDemo (b8c7d821-4fbb-4089-8978-b966512a6a45)'
+        azureSubscription: 'myYAML (c151972c-842e-4a49-b955-482b6cb92a1c)'
         appType: 'webApp'
         WebAppName: 'bnkYAML'
         packageForLinux: '$(System.ArtifactsDirectory)/**/OldDadApp.zip'
